@@ -22,6 +22,7 @@ public class Main extends PApplet {
     @Override
     public void draw() {
         stage.draw();
+        rect(10, 100, 150, 200);
     }
     public static void main(String[] args) {
         PApplet.main(Main.class);
