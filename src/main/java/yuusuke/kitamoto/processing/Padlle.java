@@ -1,16 +1,18 @@
 package yuusuke.kitamoto.processing;
 
+import processing.core.PApplet;
+
 public class Padlle {
     int x = 10;
     int y = 10;
 
-    public void draw(Main main) {
-        if(main.keyPressed){
-            System.out.println(main.keycode);
-            if(main.keyCode ==39) x = x + 1;
-            if(main.keyCode ==37) x = x + 1;
+    public void draw(PApplet pApplet) {
+        if(pApplet.keyPressed){
+            System.out.println(pApplet.keyCode);
+            if(pApplet.keyCode ==39) x = x + 1;
+            if(pApplet.keyCode ==37) x = x + 1;
         }
 
-        main.rect(10,10,10,5);
+        pApplet.rect(250, 450,30,10);
     }
 }

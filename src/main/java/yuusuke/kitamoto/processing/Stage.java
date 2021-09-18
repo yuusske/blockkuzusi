@@ -11,12 +11,9 @@ public class Stage {
         padlle = new Padlle();
     }
 
-    public void draw (Main main){
+    public void draw(PApplet pApplet){
 
-        ball.draw();
-        padlle.draw(main);
-    }
-
-    public void draw() {
+        ball.draw(pApplet);
+        padlle.draw(pApplet);
     }
 }

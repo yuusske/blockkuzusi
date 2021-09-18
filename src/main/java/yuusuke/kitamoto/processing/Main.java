@@ -1,6 +1,8 @@
 package yuusuke.kitamoto.processing;
 
 import processing.core.PApplet;
+
+
 public class Main extends PApplet {
     public int keycode;
     Stage stage;
@@ -9,8 +11,6 @@ public class Main extends PApplet {
     public void settings(){
         size(500,500);
     }
-
-
 
     @Override
     public void setup() {
@@ -21,9 +21,10 @@ public class Main extends PApplet {
 
     @Override
     public void draw() {
-        stage.draw();
-        rect(10, 100, 150, 200);
+        stage.draw(this);
     }
+
+
     public static void main(String[] args) {
         PApplet.main(Main.class);
     }
