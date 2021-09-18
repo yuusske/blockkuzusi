@@ -3,8 +3,10 @@ package yuusuke.kitamoto.processing;
 import processing.core.PApplet;
 
 public class Padlle {
-    int x = 10;
-    int y = 10;
+    int x = 255;
+    int y = 450;
+    int w = 30;
+    int h = 10;
 
     public void draw(PApplet pApplet) {
         if(pApplet.keyPressed){
@@ -13,6 +15,8 @@ public class Padlle {
             if(pApplet.keyCode ==37) x = x + 1;
         }
 
-        pApplet.rect(250, 450,30,10);
+        pApplet.noStroke();
+        pApplet.stroke(255);
+        pApplet.rect(x, y,w,h);
     }
 }
