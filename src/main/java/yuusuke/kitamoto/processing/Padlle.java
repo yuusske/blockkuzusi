@@ -2,7 +2,7 @@ package yuusuke.kitamoto.processing;
 
 import processing.core.PApplet;
 
-public class Padlle {
+public class Padlle implements Syoutotu{
     int x = 255;
     int y = 450;
     int w = 30;
@@ -17,6 +17,6 @@ public class Padlle {
 
         pApplet.noStroke();
         pApplet.stroke(255);
-        pApplet.rect(x, y,w,h);
+        pApplet.rect(x,y,w,h);
     }
 }
