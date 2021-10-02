@@ -12,7 +12,7 @@ public class Stage {
         padlle = new Padlle();
 
 
-        blocks = new Block(100, 100);
+        //blocks = new Block(100, 100);
     }
 
     public void draw(PApplet pApplet){
