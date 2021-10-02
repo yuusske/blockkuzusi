@@ -2,26 +2,32 @@ package yuusuke.kitamoto.processing;
 
 import processing.core.PApplet;
 
-public class Padlle implements Syoutotu{
-    int x = 255;
-    int y = 450;
-    int w = 30;
-    int h = 10;
+public class Padlle implements ShouTotu {
+    int px = 255;
+    int py = 450;
+    int pw = 30;
+    int ph = 10;
 
     public void draw(PApplet pApplet) {
         if(pApplet.keyPressed){
             System.out.println(pApplet.keyCode);
-            if(pApplet.keyCode ==39) x = x + 1;
-            if(pApplet.keyCode ==37) x = x + 1;
+            if(pApplet.keyCode ==39) px = px + 5;
+            if(pApplet.keyCode ==37) px = px - 5;
         }
 
         pApplet.noStroke();
         pApplet.stroke(255);
-        pApplet.rect(x,y,w,h);
+        pApplet.rect(px,py,pw,ph);
     }
 
     @Override
-    public boolean li(int x, int y) {
+    public boolean isHit(int bx, int by) {
+        if( px < bx  && bx < (px+pw) ){
+            if( py < by && by < (py+ph)){
+                //あたり！
+                return true;
+            }
+        }
         return false;
     }
 
