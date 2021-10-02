@@ -19,4 +19,14 @@ public class Padlle implements Syoutotu{
         pApplet.stroke(255);
         pApplet.rect(x,y,w,h);
     }
+
+    @Override
+    public boolean li(int x, int y) {
+        return false;
+    }
+
+    @Override
+    public void onAction(int x, int y) {
+
+    }
 }
